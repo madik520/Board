@@ -1,0 +1,11 @@
+export const OPEN_BOARD = "OPEN_BOARD";
+export const CLOSE_BOARD = "CLOSE_BOARD";
+export const SUBMIT_BOARD = "SUBMIT_BOARD";
+export const STORE_NEW_BOARD_TO_COLLECTION = "STORE_NEW_BOARD_TO_COLLECTION";
+export const SELECT_BOARD = "SELECT_BOARD";
+export const SELECT_BOARD_SUCCESS = "SELECT_BOARD_SUCCESS";
+export const OPEN_LIST = "OPEN_LIST";
+export const CLOSE_LIST = "CLOSE_LIST";
+export const CREATE_NEW_LIST = "EDIT_NEW_LIST";
+export const SUBMIT_TASK = "SUBMIT_TASK";
+export const ARCHIVE_POST = "ARCHIVE_POST";

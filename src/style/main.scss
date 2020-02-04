@@ -1,0 +1,15 @@
+@import './scss/reset.scss';
+@import './scss/header.scss';
+@import './scss/board-wrapper.scss';
+@import './scss/active-board-wrapper.scss';
+
+
+
+body{
+  background-color: rgb(240, 239, 239);
+}
+.App{
+  max-width: 85%;
+  height: auto;
+  margin: auto;
+}
