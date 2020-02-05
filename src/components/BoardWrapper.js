@@ -18,6 +18,8 @@ const BoardWrapper = ({ newBoard, openBoard, closeBoard, submitNewBoard, boardsC
         const getID = document.getElementById(id);
         if(value.length === 1 || value.length < 3){
             getID.style.cssText= "border: 3px solid red";
+        } else if(value.length >= 20){
+            getID.style.cssText= "border: 3px solid red";
         }else{
             getID.style.cssText= "border: 3px solid lightgreen";
         }

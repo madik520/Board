@@ -73,7 +73,15 @@
     .board-main{
         padding: 50px 70px;
         p{
-            margin-bottom: 30px;
+            &:first-child{
+               margin-bottom: 30px;
+            }
+            &:last-child{
+                position: absolute;
+                margin-top: 10px;
+                color: rgb(255, 0, 0);
+                opacity: 0.6;
+            }
         }
         input{
             width: 100%;
@@ -84,7 +92,7 @@
         }
     }
     .board-footer{
-        padding: 0 70px;
+        padding: 0 50px;
         display: flex;
         justify-content: center;
         button{
@@ -113,10 +121,11 @@
 }
 
 .newBoard{
-    width: 350px;
+    min-width: 350px;
     height: 100px;
     margin-top: 50px;
     margin-right: 50px;
+    padding: 0px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,17 +145,16 @@
         box-shadow: 0px 5px 9px 0 rgba(0,0,0,0.75);
     }
     h1{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
-
-@media screen and (max-width: 420px){
+@media screen and (max-width: 768px){
     .board-wrapper{
         flex-direction: column;
         align-items: center;
     }
     .create-board{
-        width: 250px;
+        width: 350px;
         margin-right: 0px;
         &:hover{
             transform: none
@@ -171,9 +179,18 @@
         }
     }
 }
+
+@media screen and (max-width: 420px){
+    .create-board{
+        width: 250px;
+    }
+    .newBoard{
+        min-width: 300px;
+    }
+}
 @media screen and (max-width: 375px){
     .active-create-board{
-        width: 270px;
+        width: 300px;
         height: 300px;
         .board-title{
             h1{
@@ -199,5 +216,14 @@
                 height: 30px;
             }
         }
+    }
+    
+}
+@media screen and (max-width: 320px){
+    .active-create-board{
+        width: 280px;
+    }
+    .newBoard{
+        min-width: 280px;
     }
 }

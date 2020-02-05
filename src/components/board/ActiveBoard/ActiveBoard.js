@@ -3,7 +3,7 @@ import "../../../style/scss/board-wrapper.scss";
 import PropTypes from 'prop-types';
 
 
-const ActiveCreateBoard = ({ defaultValue, closeBoard, onClick, onChange, onKeyPress, onBlur }) => {
+const ActiveCreateBoard = ({ defaultValue, closeBoard, onClick, onChange, onKeyPress, onBlur, warningMsg }) => {
     return(
         <div className="active-create-board">
             <div className="board-title">
@@ -12,7 +12,8 @@ const ActiveCreateBoard = ({ defaultValue, closeBoard, onClick, onChange, onKeyP
             </div>
             <div className="board-main">
                 <p>What shall we call the board?</p>
-                <input id="inputean" onBlur={onBlur} onKeyPress={onKeyPress}  onChange={onChange} type="text" defaultValue={defaultValue} />
+                <input maxLength="20" id="inputean" onBlur={onBlur} onKeyPress={onKeyPress}  onChange={onChange} type="text" defaultValue={defaultValue} />
+                {defaultValue.length >= 20 ? <p>max symbol 20</p> : null }
             </div>
             <div className="board-footer">
                 <button onClick={() => closeBoard()}>cancel</button>
@@ -29,6 +30,7 @@ ActiveCreateBoard.propTypes = {
     onKeyPress: PropTypes.func,
     onBlur: PropTypes.func,
     closeBoard: PropTypes.func,
+    warningMsg: PropTypes.string
 }
 
 ActiveCreateBoard.defaultProps = {
@@ -37,7 +39,8 @@ ActiveCreateBoard.defaultProps = {
     onChange: () => {},
     onKeyPress: () => {},
     onBlur: () => {},
-    closeBoard: () => {}
+    closeBoard: () => {},
+    warningMsg: ""
 }
 
 

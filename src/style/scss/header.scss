@@ -18,3 +18,13 @@
           transform: scale(1.10) rotate(-4.5deg);
       }
 }
+
+@media screen and (max-width: 800px){
+    .logo{
+        &:hover{
+            filter: drop-shadow(6px 6px 6px #333);
+            transition: none;
+            transform: none;
+        }
+    }
+}
